@@ -53,6 +53,6 @@ wsl -l -v
 7.  Install Python3 and Jupyter on WSL terminal
 ```
 sudo apt update && sudo apt upgrade
-sudo apt install python3 python3-pip
+sudo apt install python3.8 python3-pip
 pip3 install jupyter
 ```
