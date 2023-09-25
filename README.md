@@ -57,7 +57,12 @@ sudo apt install python3.8 python3-pip
 pip3 install jupyter
 ```
 
-8. Add jupyter command to PATH. First open ~/.bashrc in a text editor:
+8. Install required dependencies from requirements.txt
+```
+pip3 install -r requirements.txt
+```
+
+9. Add jupyter command to PATH. First open ~/.bashrc in a text editor:
 ```
 nano ~/.bashrc
 ```
