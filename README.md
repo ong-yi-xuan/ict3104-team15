@@ -56,3 +56,48 @@ sudo apt update && sudo apt upgrade
 sudo apt install python3.8 python3-pip
 pip3 install jupyter
 ```
+
+8. Add jupyter command to PATH. First open ~/.bashrc in a text editor:
+```
+nano ~/.bashrc
+```
+
+At the end of the file, add this line
+```
+export PATH=$PATH:/home/user/.local/bin
+```
+
+Save the file and exit. Then, source the file to apply our changes:
+```
+source ~/.bashrc
+```
+
+
+## Running Jupyter Notebook
+### Windows
+1. Locate cloned repository folder in WSL
+WSL mounts Windows drives under the /mnt/ directory. So, for example:
+- C:\ in Windows is available as /mnt/c/ in WSL
+- D:\ in Windows is available as /mnt/d/ in WSL
+
+2. Navigate to your desired folder in WSL terminal and replace <drive> and <folder-to-repository> as per your folders
+```
+cd /mnt/<drive>/<folder-to-repository>/ict3104-team15/
+```
+
+3. Launch the Jupyter notebook
+```
+jupyter notebook --no-browser --ip=127.0.0.1
+```
+
+4. A URL to the Jupyter notebook should be generated in the format http://127.0.0.1:8888/tree?token=<token-string>.
+
+![01 - generated urls](https://github.com/ong-yi-xuan/ict3104-team15/assets/91550661/0cb046b4-6ee9-4c52-b926-ce357927eda9)
+
+5. Copy the URL and paste it into the browser of your choice
+
+![02 - notebook](https://github.com/ong-yi-xuan/ict3104-team15/assets/91550661/6d0b1422-b0e8-42f8-8587-5c2daa0ce815)
+
+6. Double click on ict3104-team15.ipynb to launch the notebook
+
+
