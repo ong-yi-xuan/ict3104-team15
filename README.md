@@ -57,12 +57,21 @@ sudo apt install python3.8 python3-pip
 pip3 install jupyter
 ```
 
-8. Install required dependencies from requirements.txt
+8. Locate cloned repository folder in WSL and navigate to it in the WSL terminal
+WSL mounts Windows drives under the /mnt/ directory. So, for example:
+- C:\ in Windows is available as /mnt/c/ in WSL
+- D:\ in Windows is available as /mnt/d/ in WSL
+
+```
+cd /mnt/<drive>/<folder-to-repository>/ict3104-team15/
+```
+
+9. Install required dependencies from requirements.txt
 ```
 pip3 install -r requirements.txt
 ```
 
-9. Add jupyter command to PATH. First open ~/.bashrc in a text editor:
+10. Add jupyter command to PATH. First open ~/.bashrc in a text editor:
 ```
 nano ~/.bashrc
 ```
@@ -80,12 +89,7 @@ source ~/.bashrc
 
 ## Running Jupyter Notebook
 ### Windows
-1. Locate cloned repository folder in WSL
-WSL mounts Windows drives under the /mnt/ directory. So, for example:
-- C:\ in Windows is available as /mnt/c/ in WSL
-- D:\ in Windows is available as /mnt/d/ in WSL
-
-2. Navigate to your desired folder in WSL terminal and replace <drive> and <folder-to-repository> as per your folders
+1. Navigate to the repository folder in WSL terminal and replace <drive> and <folder-to-repository> as per your setup
 ```
 cd /mnt/<drive>/<folder-to-repository>/ict3104-team15/
 ```
