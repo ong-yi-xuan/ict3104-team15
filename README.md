@@ -54,6 +54,7 @@ wsl -l -v
 ```
 sudo apt update && sudo apt upgrade
 sudo apt install python3.8 python3-pip
+python3 -m pip install --upgrade pip
 pip3 install jupyter
 ```
 
@@ -71,7 +72,12 @@ cd /mnt/<drive>/<folder-to-repository>/ict3104-team15/
 pip3 install -r requirements.txt
 ```
 
-10. Add jupyter command to PATH. First open ~/.bashrc in a text editor:
+10. Upgrade Jupyter to ensure compatibility with installed dependencies 
+```
+pip3 install -U jupyter
+```
+   
+11. Add jupyter command to PATH. First open ~/.bashrc in a text editor:
 ```
 nano ~/.bashrc
 ```
@@ -80,6 +86,8 @@ At the end of the file, add this line
 ```
 export PATH=$PATH:/home/user/.local/bin
 ```
+![07 - add jupyter to path](https://github.com/ong-yi-xuan/ict3104-team15/assets/91550661/a6b5607f-4fee-4d6c-89f5-ab2b8b98cb5f)
+
 
 Save the file and exit. Then, source the file to apply our changes:
 ```
