@@ -134,6 +134,54 @@ The Triton library (https://github.com/triton-inference-server/client) used in t
    ```
 </details>
 
+<details>
+  <summary><h3>Windows/MacOS (via Google Colab)</h3></summary>
+   
+   1. Go to the Google Colab website: https://colab.research.google.com/
+   
+   2. Click on the Upload tab in the pop-up dialogue.
+   
+   3. Click on the Choose File button and navigate to the cloned repository folder where your Jupyter notebook is located and select it.
+   
+   4. Wait for the notebook to upload. Once uploaded, it will open in a new tab.
+   ![Upload Jupyter Notebook to Google Colab](https://github.com/ong-yi-xuan/ict3104-team15/assets/91550661/37f72d8e-5aec-427a-b062-be8203f0015b)
+   ![Jupyter File Successfully Uploaded on Google Colab](https://github.com/ong-yi-xuan/ict3104-team15/assets/91550661/2633d186-1d76-48b2-bed9-9b66c35eef02)
+   
+   5. Change the runtime type setting under "Runtime" > "Change runtime type" to the following:
+
+      Runtime type: Python 3
+      
+      Hardware accelerator: T4 GPU
+      
+      ![Change Runtime Type](https://github.com/ong-yi-xuan/ict3104-team15/assets/91550661/2f22d1b3-e47e-4252-921f-81c454776fea)
+
+
+   7. Downgrade Python version to 3.8 using the provided commands:
+    ```
+    # Downgrade Python by reinstalling pip and distutils
+    !apt-get install python3.8 python3-pip python3.8-distutils
+    !update-alternatives --install /usr/local/bin/python3 python3 /usr/bin/python3.8 1
+    
+    # Check the result
+    !python --version
+    ```
+    
+   7. Run the next cell to create button to upload requirements.txt
+   ```
+   from google.colab import files
+   uploaded = files.upload()
+   ```
+   
+   8. This will give you a button to "Choose Files." Click on it and select the requirements.txt file.
+   ![Choose File](https://github.com/ong-yi-xuan/ict3104-team15/assets/91550661/73dd952c-bd36-41db-a104-8c22468c4a40)
+   ![Requirements.txt Uploaded](https://github.com/ong-yi-xuan/ict3104-team15/assets/91550661/275bfad6-584d-4a5c-be26-59dbaa570663)
+   
+   9. After uploading the requirements.txt file, you can install the packages specified in that file. Run the next cell:
+   ```
+   !python -m pip install -r requirements.txt
+   ```
+      
+</details>
 
 ## Running Jupyter Notebook
 <details>
@@ -175,4 +223,12 @@ The Triton library (https://github.com/triton-inference-server/client) used in t
    ![Notebook Preview](https://github.com/ong-yi-xuan/ict3104-team15/assets/91550661/6d0b1422-b0e8-42f8-8587-5c2daa0ce815)
    
    6. Double click on ict3104-team15.ipynb to launch the notebook
+</details>
+
+<details>
+  <summary><h3>Windows/MacOS (via Google Colab)</h3></summary>
+      
+   1. Navigte to your Google Drive and open the uploaded Jupyter notebook
+   2. Press the "Run" button beside each cell to run the code/commands
+      
 </details>
