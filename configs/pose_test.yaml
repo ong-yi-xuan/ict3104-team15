@@ -1,0 +1,21 @@
+pretrained_model_path: ./checkpoints/stable-diffusion-v1-4
+output_dir: ict3104-team15/output/gif_results
+validation_data:
+  prompts:
+  - Ironman on the moon
+  - Stormtrooper at the beach
+  video_length: 8
+  width: 512
+  height: 512
+  num_inference_steps: 500
+  guidance_scale: 12.5
+  use_inv_latent: false
+  num_inv_steps: 50
+  dataset_set: val
+train_batch_size: 1
+validation_steps: 100
+resume_from_checkpoint: ./checkpoints/followyourpose_checkpoint-1000
+seed: 33
+mixed_precision: 'no'
+gradient_checkpointing: false
+enable_xformers_memory_efficient_attention: true
