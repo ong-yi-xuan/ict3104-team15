@@ -2,7 +2,7 @@
 
 ## File Structure
 
-- **configs**: This directory likely contains the configuration files. These files are used to set parameters or settings for the inference.
+- **configs**: This folder files are used to set parameters or settings for the inference.
 
 - **data**: The 'data' folder holds datasets from Sims4Actions and Charades. The user can input other datasets if desired in this folder, and edit the paths necessary in the notebook where needed.
 
